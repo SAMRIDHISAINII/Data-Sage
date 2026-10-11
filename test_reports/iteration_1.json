@@ -1,0 +1,22 @@
+{
+  "summary": "Comprehensive backend + frontend testing of the AI Data Analysis Agent (DataSage). 24/24 pytest backend tests pass (health, models, samples listing, 3 sample loads, CSV upload with money/date coercion, XLSX upload, unsupported type guardrail, SQL table+SELECT+DROP guardrail+bad conn, dataset detail/preview/404, overview + cached, ask stream with GPT-6-Luna sql + python approaches, off-topic clarification, follow-up RAG, Claude Sonnet 5.5 model, messages history). Streamlit frontend verified end-to-end: landing hero + 4 capability cards + 3 sample buttons + sidebar (Model select, Upload/Samples/SQL tabs); clicking Sales Orders loads dataset (2,400 rows, 14 cols) with Schema & profile expander, Dataset briefing, insights and 5 suggested questions; clicking a suggested question runs the agent and renders SQL + VALIDATED + rows badges, Answer / Key insights / How this was computed / Caveats markdown, Result table + code expanders, plotly chart; stChatInputTextArea present.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_backend.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "server.py global error handler returns 500 with raw exception text — fine for an MVP but consider sanitizing for production.",
+    "datasets._cache is an unbounded in-process dict; large multi-upload sessions could balloon memory. Not a bug for MVP.",
+    "agent.ask_stream reuses the same chat object across retries; this is intentional for context carry-over but means a bad plan error message is appended to the LLM history — works fine today."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (24/24)", "frontend": "100% (all probed elements)"},
+  "test_credentials": "No auth. EMERGENT_LLM_KEY in /app/backend/.env; demo SQLite at sqlite:////app/backend/data/demo.sqlite",
+  "seed_data_creation": "None persisted beyond ephemeral mongo datasets created during tests. Datasets saved to /app/backend/data/*.parquet (per-upload).",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Backend pytest suite lives at /app/backend/tests/test_backend.py — reusable regression. The ask endpoint streams NDJSON; use requests stream=True and json.loads per line. LLM calls take 10-30s each; suite finishes in ~60s with xdist. Frontend is Streamlit — use get_by_role('button', name=...) for sample buttons and query stChatInputTextArea for the input. Allow 15s for dataset load and 30-45s for an ask round trip."
+}

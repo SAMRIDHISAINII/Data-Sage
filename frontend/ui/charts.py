@@ -33,8 +33,10 @@ def build_figure(rows: list[dict], chart: dict):
     fig.update_layout(
         paper_bgcolor=COLORS["surface"], plot_bgcolor=COLORS["surface"], font_color=COLORS["text"],
         font_family="Plus Jakarta Sans", margin=dict(l=20, r=20, t=50 if title else 20, b=20), height=380,
-        legend=dict(orientation="h", y=-0.2), title_font_size=15,
+        legend=dict(orientation="h", y=-0.2, title_text=""), title_font_size=15,
     )
+    if len(ys) > 1:
+        fig.update_layout(yaxis_title="")
     fig.update_xaxes(gridcolor=COLORS["border"], zeroline=False)
     fig.update_yaxes(gridcolor=COLORS["border"], zeroline=False)
     return fig
