@@ -1,0 +1,23 @@
+[server]
+port = 3000
+address = "0.0.0.0"
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+maxUploadSize = 200
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+primaryColor = "#38BDF8"
+backgroundColor = "#0B0F17"
+secondaryBackgroundColor = "#131B2A"
+textColor = "#F8FAFC"
+baseRadius = "8px"
+
+[theme.sidebar]
+backgroundColor = "#0D131F"
+textColor = "#F8FAFC"

@@ -1,0 +1,77 @@
+{
+  "project_type": "streamlit_data_app",
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST + PERFORMANCE DATA PRO",
+  "theme": "Dark Mode First",
+  "color_tokens": {
+    "bg_base": "#0B0F17",
+    "bg_surface": "#131B2A",
+    "bg_surface_raised": "#1E293B",
+    "bg_sidebar": "#0D131F",
+    "border_subtle": "#1E293B",
+    "border_bold": "#334155",
+    "text_primary": "#F8FAFC",
+    "text_secondary": "#94A3B8",
+    "text_muted": "#64748B",
+    "accent_primary": "#38BDF8",
+    "accent_primary_hover": "#0284C7",
+    "accent_secondary": "#818CF8",
+    "success": "#34D399",
+    "warning": "#FBBF24",
+    "error": "#F87171",
+    "chat_user_bg": "#1E293B",
+    "chat_assistant_bg": "#0F172A"
+  },
+  "fonts": {
+    "google_fonts_import": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap",
+    "heading_font": "'Plus Jakarta Sans', sans-serif",
+    "body_font": "'Plus Jakarta Sans', sans-serif",
+    "mono_font": "'JetBrains Mono', monospace"
+  },
+  "spacing_and_radius": {
+    "border_radius": "8px",
+    "card_padding": "1.25rem",
+    "gap_density": "tight (0.75rem - 1rem)"
+  },
+  "streamlit_config_toml": "[theme]\nprimaryColor = \"#38BDF8\"\nbackgroundColor = \"#0B0F17\"\nsecondaryBackgroundColor = \"#131B2A\"\ntextColor = \"#F8FAFC\"\nfont = \"sans-serif\"\n\n[theme.sidebar]\nbackgroundColor = \"#0D131F\"\ntextColor = \"#F8FAFC\"\n",
+  "chart_color_sequence": [
+    "#38BDF8",
+    "#818CF8",
+    "#34D399",
+    "#FBBF24",
+    "#F472B6",
+    "#A78BFA",
+    "#3861FB"
+  ],
+  "plotly_template": {
+    "paper_bgcolor": "#131B2A",
+    "plot_bgcolor": "#131B2A",
+    "font_color": "#F8FAFC",
+    "grid_color": "#1E293B"
+  },
+  "badge_styles": {
+    "sql_badge": "background: rgba(56, 189, 248, 0.15); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 10px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;",
+    "python_badge": "background: rgba(129, 140, 248, 0.15); color: #818CF8; border: 1px solid rgba(129, 140, 248, 0.3); padding: 4px 10px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;",
+    "valid_badge": "background: rgba(52, 211, 153, 0.15); color: #34D399; border: 1px solid rgba(52, 211, 153, 0.3); padding: 4px 10px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;",
+    "warning_badge": "background: rgba(251, 191, 36, 0.15); color: #FBBF24; border: 1px solid rgba(251, 191, 36, 0.3); padding: 4px 10px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;"
+  },
+  "chat_bubble_styling": {
+    "user_message": "background: #1E293B; border: 1px solid #334155; border-radius: 12px 12px 2px 12px; padding: 14px 18px; color: #F8FAFC; margin-bottom: 12px;",
+    "assistant_message": "background: #0F172A; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px 12px 12px 2px; padding: 16px 20px; color: #F8FAFC; margin-bottom: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"
+  },
+  "css_overrides_st_markdown": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');\n\nhtml, body, [class*=\"css\"] {\n  font-family: 'Plus Jakarta Sans', sans-serif;\n  color: #F8FAFC;\n}\n\n.stApp {\n  background-color: #0B0F17;\n}\n\n[data-testid=\"stSidebar\"] {\n  background-color: #0D131F;\n  border-right: 1px solid #1E293B;\n}\n\ncode, pre, [data-testid=\"stCodeBlock\"] {\n  font-family: 'JetBrains Mono', monospace !important;\n}\n\n.stMetric {\n  background: #131B2A;\n  border: 1px solid #1E293B;\n  border-radius: 8px;\n  padding: 12px 16px;\n}\n\n.stButton > button {\n  background: linear-gradient(135deg, #0284C7 0%, #38BDF8 100%);\n  color: #FFFFFF;\n  border: none;\n  border-radius: 6px;\n  font-weight: 600;\n  padding: 0.5rem 1.25rem;\n  transition: all 0.2s ease;\n}\n\n.stButton > button:hover {\n  background: linear-gradient(135deg, #0369A1 0%, #0284C7 100%);\n  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);\n  color: #FFFFFF;\n}\n</style>",
+  "testing_attributes": "All key containers, buttons, model selectors, query inputs, metrics, tables, and badge elements MUST include explicit data-testid attributes (e.g. data-testid='dataset-upload-input', data-testid='model-selector-dropdown', data-testid='query-submit-button', data-testid='generated-sql-code', data-testid='guardrail-status-badge').",
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1753998941540-081eed4f6397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHw0fHxkYXRhJTIwYW5hbHl0aWNzJTIwY2hhcnRzJTIwdmlzdWFsaXphdGlvbiUyMGRhcmslMjBtb2RlJTIwdGVjaHxlbnwwfHx8fDE3OTE3MTExMjN8MA&ixlib=rb-4.1.0&q=85",
+      "category": "hero_background",
+      "description": "Code display monitor for technical dark mode banner"
+    }
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Use data-testid attributes on all interactive elements.",
+    "Do not use transparent background on dropdowns or floating headers.",
+    "Follow dark-mode-first high-contrast accessibility standards.",
+    "Use Plotly dark template matching #131B2A paper background for all generated figures.",
+    "Keep chat streaming bubbles visually distinct between user and assistant."
+  ]
+}
