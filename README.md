@@ -2,6 +2,7 @@
 
 **Ask your data anything. No SQL required.**
 
+
 DataSage is an AI-powered, natural-language data analyst that enables users to explore datasets, generate insights, execute validated SQL or Python analyses, visualize results, and understand business trends through plain-language explanations.
 
 Upload a CSV or Excel file, select a sample dataset, or connect a database, then ask questions such as:
